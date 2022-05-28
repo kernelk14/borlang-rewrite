@@ -8,6 +8,8 @@ stack = []
 
 filename = open("hello.bl", "r")
 program = filename.read().split()
-
+# I need to choose a programming language to transpile to.
 for p, op in enumerate(program):
-    print(program[::])
+    i = 1
+    if program[p] == 'write':
+        print("I saw a write statement")
