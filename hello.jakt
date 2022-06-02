@@ -1,5 +1,5 @@
-function main(args: [String]) {
-    println("{}", "Hello")
+function main()
+{    println("{}", "Hello")
     println("{}", "world")
     let x = 5
     println("{}", x)
