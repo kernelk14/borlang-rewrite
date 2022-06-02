@@ -13,17 +13,22 @@ fn = "hello.bl"
 filename = open(fn , "r")
 out_path = os.path.splitext(fn)
 
-of = out_path[0] + ".c"
+of = out_path[0] + ".jakt"
 # print(of)
 out = open(of, "w")
 program = filename.read().split()
 
 # I need to choose a programming language to transpile to.
-out.write("#import <stdio.h>\n")
-out.write("int main() {\n")
+# For now i chose Jakt(https://github.com/serenityos/jakt).
+out.write("function main(args: [String]) {\n")
 for p, op in enumerate(program):
     i = 1
     if program[p] == 'write':
-        out.write(f' printf({program[p+1]});\n')
-        print("I saw a write statement")
+        out.write('    println("{')
+        out.write('}",')
+        out.write(f' {program[p+1]})\n')
+        # print("I saw a write statement")
+    if program[p] == 'var':
+        out.write(f'    let {program[p+1]} = {program[p+3]}\n')
 out.write("}\n")
+# os.system(f"jakt {of}")
