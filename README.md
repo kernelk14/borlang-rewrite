@@ -2,7 +2,7 @@
 A rewritten version of Borlang.
 
 # NOTE
-I'm transpiling this to [Jakt](https://github.com/serenityos/jakt), for now.
+I'm transpiling this to [Jakt](https://github.com/serenityos/jakt), for memory safety.
 
 # Quick Start
 ```console
