@@ -1,7 +1,8 @@
-write "Hello"
-write "world"
-var x = 5
-
-write x
-write x
-write x
+fun main do
+	write "Hello"
+	write "world"
+	var x = 5
+	write x
+	write x
+	write x
+end
